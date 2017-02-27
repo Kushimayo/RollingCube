@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameOver : MonoBehaviour {
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.name == "Cube")
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+        }
     }
     // Use this for initialization
     void Start () {
