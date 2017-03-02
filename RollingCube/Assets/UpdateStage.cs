@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameOver : MonoBehaviour {
+public class UpdateStage : MonoBehaviour {
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Cube")
         {
-            GameObject.Find("StageManager").SendMessage("RestartGame");
+            Debug.Log("Do Update Stage");
+            GameObject.Find("StageManager").SendMessage("UpdateStage");
         }
     }
+
     // Use this for initialization
     void Start () {
 		

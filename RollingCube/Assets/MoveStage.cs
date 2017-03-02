@@ -11,7 +11,11 @@ public class MoveStage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float new_Z_position = transform.position.z - Speed;
-        transform.position = new Vector3(transform.position.x, transform.position.y, new_Z_position);		
 	}
+
+    void MoveStageNomal()
+    {
+        float new_Z_position = transform.position.z - Speed;
+        transform.position = new Vector3(transform.position.x, transform.position.y, new_Z_position);
+    }
 }
